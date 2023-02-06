@@ -70,7 +70,7 @@ CREATE TABLE `articles` (
 FOREIGN KEY(machines) REFERENCES machines(machines_id) ON DELETE SET NULL, 
 FOREIGN KEY(warehouse_id) REFERENCES warehouse(warehouse_id) ON DELETE SET NULL 
 ); 
-CREATE TABLE `Order` ( 
+CREATE TABLE `order` ( 
 `order_id` INT PRIMARY KEY NOT NULL, 
 `customer_id` INT, 
 `employee_id` INT, 
@@ -82,10 +82,10 @@ FOREIGN KEY(employee_id) REFERENCES employee(employee_id) ON DELETE SET NULL,
 FOREIGN KEY(freight_forwarding _id) REFERENCES freight_forwarding(freight_forwarding _id) ON DELETE SET NULL, 
 FOREIGN KEY(articles_id) REFERENCES article(articles_id) ON DELETE SET NULL 
 ); 
-CREATE TABLE `work schedule` ( 
+CREATE TABLE `work_schedule` ( 
 `work schedule _id` INT PRIMARY KEY NOT NULL, 
 `articles` INT, 
-`order INT, 
+`order` INT,
 `employee_in_charge` varchar(100) NOT NULL, 
 `creation_date` Date NOT NULL, 
 `completion` Date NOT NULL, 
