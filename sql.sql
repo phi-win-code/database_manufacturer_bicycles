@@ -1,8 +1,4 @@
-CREATE TABLE IF NOT EXISTS sql (
-    `Column_1` VARCHAR(124) CHARACTER SET utf8,
-    `Column_2` VARCHAR(4) CHARACTER SET utf8
-);
-INSERT INTO sql VALUES ('CREATE TABLE `customer` ( ',NULL),
+CREATE TABLE `customer` ( ',NULL),
 	('`customer_id` INT PRIMARY KEY NOT NULL',' '),
 	('`name` varchar(100) NOT NULL',' '),
 	('`address` varchar(100) NOT NULL',' '),
@@ -108,5 +104,4 @@ INSERT INTO sql VALUES ('CREATE TABLE `customer` ( ',NULL),
 	('FOREIGN KEY(externally_sourced_parts_id) REFERENCES externally_sourced_parts(externally_sourced_parts_id) ON DELETE SET NULL',' '),
 	('FOREIGN KEY(self_produced_parts_id) REFERENCES self_produced_parts(self_produced_parts_id) ON DELETE SET NULL',' '),
 	('FOREIGN KEY(work_schedule_id) REFERENCES work_schedule(work_schedule_id) ON DELETE SET NULL',' '),
-	('FOREIGN KEY(machines_id) REFERENCES machine(machines_id) ON DELETE SET NULL ',NULL),
-	(');',NULL);
+	('FOREIGN KEY(machines_id) REFERENCES machine(machines_id) ON DELETE SET NULL);
